@@ -27,9 +27,9 @@
             <input type="submit">
         </form>
 
-            <c:if test="${param.username.equalsIgnoreCase('admin') && param.password.equalsIgnoreCase('password')}">
-                <c:redirect url = "profile.jsp"/>
-            </c:if>
+        <c:if test="${param.username.equalsIgnoreCase('admin') && param.password.equalsIgnoreCase('password')}">
+            <c:redirect url = "profile.jsp"/>
+        </c:if>
 
     </body>
 </html>
