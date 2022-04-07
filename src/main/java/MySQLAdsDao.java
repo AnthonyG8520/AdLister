@@ -7,18 +7,23 @@ import java.util.List;
 
 public class MySQLAdsDao implements Ads{
 
-    public List<Ad> all() throws SQLException {
-        Config config = new Config();
-        DriverManager.registerDriver(new Driver());
-        Connection connection = DriverManager.getConnection(
-                config.getUrl(),
-                config.getUser(),
-                config.getPassword()
+    private Connection connection;
+
+    public MySQLAdsDao(Config c) throws SQLException {
+        this.connection = DriverManager.getConnection(
+                c.getUrl(),
+                c.getUser(),
+                c.getPassword()
         );
+    }
+
+    public List<Ad> all() throws SQLException{
         Statement statement = connection.createStatement();
         ResultSet rs = statement.executeQuery("SELECT * FROM ads");
         while(rs.next()){
-
+            System.out.println(rs.getInt("id"));
+            System.out.println(rs.getString("title");
+            System.out.println(rs.getString("description"));
         }
     }
 
