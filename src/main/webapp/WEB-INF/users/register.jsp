@@ -11,6 +11,21 @@
     <title>Title</title>
 </head>
 <body>
+<h1>Make An Account</h1>
+<Form action="/register" method="POST">
+    <label for="username">Username</label>
+    <input id="username" type="text" name="username"> <br>
+
+    <label for="email">Email</label>
+    <input id="email" type="text" name="email"><br>
+
+    <label for="password">Password</label>
+    <input id="password" type="text" name="password"><br>
+    <button type="submit">Register</button>
+</Form>
+
+
+
 
 </body>
 </html>
